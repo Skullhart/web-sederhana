@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Situs Sederhana - Beranda</title>
+    <style>
+        :root{
+            --bg:#f7f9fc; --card:#ffffff; --primary:#2563eb; --muted:#6b7280;
+            --radius:10px; font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+        }
+        *{box-sizing:border-box}
+        body{margin:0;background:var(--bg);color:#0f172a;line-height:1.5}
+        header{background:linear-gradient(90deg,#ffffff 0%,#f1f5f9 100%);border-bottom:1px solid #e6eef8}
+        .container{max-width:980px;margin:0 auto;padding:24px}
+        nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+        .brand{font-weight:700;color:var(--primary);letter-spacing:.4px}
+        .nav-links{display:flex;gap:12px}
+        a{color:inherit;text-decoration:none}
+        a.button{background:var(--primary);color:#fff;padding:8px 14px;border-radius:8px;font-weight:600}
+        main{padding:40px 0}
+        .hero{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+        .hero-card{background:var(--card);padding:28px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(15,23,42,0.06);flex:1;min-width:260px}
+        h1{margin:0 0 8px;font-size:28px}
+        p.lead{margin:0 0 16px;color:var(--muted)}
+        .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:20px}
+        .feature{background:var(--card);padding:16px;border-radius:10px;border:1px solid #eef3fb}
+        footer{padding:18px 0;text-align:center;color:var(--muted);font-size:14px}
+        @media(min-width:720px){h1{font-size:36px}}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="brand">Sederhana</div>
+                <div class="nav-links">
+                    <a href="#" aria-current="page">Beranda</a>
+                    <a href="#about">Tentang</a>
+                    <a href="#contact">Kontak</a>
+                    <a class="button" href="#get-started">Mulai</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="hero-card">
+                    <h1 id="hero-title">Selamat datang di Situs Sederhana</h1>
+                    <p class="lead">Contoh halaman beranda minimal yang responsif dan mudah dikembangkan. Cocok sebagai titik awal untuk proyek web kecil.</p>
+                    <p>
+                        <a class="button" href="#about">Pelajari Lebih Lanjut</a>
+                    </p>
+                </div>
+
+                <aside style="min-width:220px">
+                    <div class="feature" style="margin-bottom:12px">
+                        <strong>Ringan</strong>
+                        <div style="color:var(--muted);font-size:14px">Hanya HTML & CSS, cepat dimuat.</div>
+                    </div>
+                    <div class="feature">
+                        <strong>Mudah Dikustom</strong>
+                        <div style="color:var(--muted);font-size:14px">Tata letak sederhana yang mudah diubah.</div>
+                    </div>
+                </aside>
+            </section>
+
+            <section id="about" style="margin-top:34px">
+                <h2 style="margin:0 0 10px">Tentang</h2>
+                <p style="margin:0;color:var(--muted)">Halaman ini dibuat sebagai contoh struktur HTML sederhana: header, hero, fitur, dan footer. Tambahkan komponen, gambar, atau integrasi sesuai kebutuhan.</p>
+
+                <div class="features" style="margin-top:18px">
+                    <div class="feature"><strong>Responsif</strong><div style="color:var(--muted);font-size:13px">Bekerja baik di ponsel dan desktop.</div></div>
+                    <div class="feature"><strong>Semantik</strong><div style="color:var(--muted);font-size:13px">Menggunakan elemen HTML5 untuk aksesibilitas.</div></div>
+                    <div class="feature"><strong>Mudah</strong><div style="color:var(--muted);font-size:13px">Struktur bersih untuk pemula.</div></div>
+                </div>
+            </section>
+
+            <section id="contact" style="margin-top:28px">
+                <h2 style="margin:0 0 10px">Kontak</h2>
+                <p style="margin:0;color:var(--muted)">Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            © <span id="year"></span> Sederhana — Dibuat dengan HTML & CSS
+        </div>
+    </footer>
+
+    <script>
+        // isi tahun dinamis
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html></div>
